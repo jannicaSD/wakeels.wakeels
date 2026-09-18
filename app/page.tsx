@@ -9,11 +9,11 @@ export default function Index() {
   return (
     <main>
       <HomePage />
-      <About />
+      {/* <About />
       <ContactPage />
       <FamilySponsorshipPage />
       <GetInvolvedPage />
-      <CommunitySponsorshipPage />
+      <CommunitySponsorshipPage /> */}
     </main>
   );
 }

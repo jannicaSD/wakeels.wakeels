@@ -1,4 +1,5 @@
 import Navbar from "./component/navbar";
+import Footer from "./component/footer"; // 1. Import your footer component
 import "./globals.css";
 
 export default function RootLayout({
@@ -8,9 +9,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-[#F3F0E6] text-[#221F1B] min-h-screen flex flex-col font-sans">
         <Navbar />
-        {children}
+        
+        {/* Main page content container */}
+        <main className="flex-grow">
+          {children}
+        </main>
+        
+        <Footer /> {/* 2. Render your footer component here */}
       </body>
     </html>
   );
