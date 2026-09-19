@@ -11,10 +11,10 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "What We Do", href: "/what-we-do" },
+    { name: "What We Do", href: "/what_we_do" },
     { name: "Community Sponsorship", href: "/community-sponsorship" },
     { name: "Family Sponsorship", href: "/family-sponsorship" },
-    { name: "Get Involved", href: "/get-involved" },
+    { name: "Get Involved", href: "/get_involved" },
     { name: "News & Stories", href: "/stories" },
     { name: "Contact", href: "/contact" },
   ];

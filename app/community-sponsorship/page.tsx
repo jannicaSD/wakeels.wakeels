@@ -1,10 +1,25 @@
-import CommunityClient from "./communityclient";
+import CommunitySponsorshipHeroSection from "./hero"; // (or update path as per your folder structure)
+import HowSponsorshipWorksSection from "./community";
+import SponsorshipFAQSection from "./faq&cat";
 
 export const metadata = {
-  title: "UK Community Sponsorship | Wakeels and Wakeels",
-  description: "How UK Community Sponsorship works, and how Wakeels and Wakeels — an approved Home Office sponsor group — helps communities welcome refugee families to safety.",
+  title: "Community Sponsorship | Welcome a Refugee Family | Wakeels and Wakeels",
+  description: "Since 2016, Community Sponsorship has enabled ordinary groups across the UK to formally welcome refugee families and support their resettlement.",
 };
 
-export default function Page() {
-  return <CommunityClient />;
+export default function CommunitySponsorshipPage() {
+  return (
+    <div className="bg-[#F3F0E6] text-[#221F1B] min-h-screen flex flex-col font-sans">
+      
+      {/* 1. Hero & Overview Section */}
+      <CommunitySponsorshipHeroSection />
+
+      {/* 2. How Community Sponsorship Works (UNHCR & Home Office Pathway) */}
+      <HowSponsorshipWorksSection />
+
+      {/* 3. Frequently Asked Questions & Call to Action */}
+      <SponsorshipFAQSection />
+
+    </div>
+  );
 }
