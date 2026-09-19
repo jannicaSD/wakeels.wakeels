@@ -37,7 +37,7 @@ export default function HomePage() {
               See how sponsorship works &rarr;
             </Link>
             <Link
-              href="/what-we-do"
+              href="/what_we_do"
               className="w-full sm:w-auto bg-[#1F4A43] text-[#F3F0E6] font-semibold px-6 py-3.5 rounded shadow-sm hover:bg-[#153732] border border-[#C68A2E]/30 transition-all text-center"
             >
               Get support &rarr;

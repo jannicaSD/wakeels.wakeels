@@ -57,7 +57,7 @@ export default function Navbar() {
           {/* Call to Action Button (Desktop) */}
           <div className="hidden xl:block">
             <Link
-              href="/get-involved"
+              href="/support_us" 
               className="bg-[#C68A2E] text-[#153732] px-4 py-2.5 rounded text-sm font-semibold hover:bg-opacity-90 transition shadow-sm"
             >
               Support Us
@@ -107,7 +107,7 @@ export default function Navbar() {
           })}
           <div className="pt-2">
             <Link
-              href="/get-involved"
+              href="/support_us" 
               onClick={() => setIsOpen(false)}
               className="w-full text-center block bg-[#C68A2E] text-[#153732] px-4 py-2.5 rounded font-semibold hover:bg-opacity-90 transition"
             >
