@@ -1,163 +1,190 @@
-"use client";
-
 import Link from "next/link";
+
+export const metadata = {
+  title: "Contact Us | Get in Touch | Wakeels and Wakeels",
+  description: "Get in touch with Wakeels and Wakeels CIC for support, community sponsorship inquiries, volunteering, donations, or partnerships.",
+};
 
 export default function ContactPage() {
   return (
     <div className="bg-[#F3F0E6] text-[#221F1B] min-h-screen flex flex-col font-sans">
       
-      {/* PAGE HEADER */}
-      <section className="bg-[#1F4A43] text-[#F3F0E6] py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-4">
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#F3F0E6]">
-            Contact Us
+      {/* 1. HERO SECTION */}
+      <section className="bg-[#153732] text-[#F3F0E6] py-20 sm:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto space-y-6 text-center sm:text-left">
+          
+          <div className="inline-block bg-[#C68A2E]/10 text-[#C68A2E] border border-[#C68A2E]/30 text-xs sm:text-sm font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+            Get in Touch
+          </div>
+
+          <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-[#F3F0E6] leading-tight">
+            We&apos;d be glad to hear from you.
           </h1>
-          <p className="text-lg sm:text-xl font-light text-[#F3F0E6]/90 max-w-2xl">
-            Get in touch with Wakeels and Wakeels CIC for support, sponsorship enquiries, volunteering, or partnerships.
+
+          <p className="text-lg sm:text-xl font-light text-[#F3F0E6]/90 max-w-3xl leading-relaxed">
+            Whether you are looking for support, exploring Community Sponsorship, interested in volunteering, considering a donation or looking for a partnership, our team is here to help.
           </p>
+
         </div>
       </section>
 
-      {/* MAIN CONTENT CONTAINER */}
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12 flex-grow w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      {/* 2. MAIN CONTENT AREA (Form & Details Grid) */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 flex-grow w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          {/* LEFT 2 COLS: CONTACT FORM */}
-          <div className="lg:col-span-2 bg-white p-8 sm:p-10 rounded-lg shadow-sm border border-[#1F4A43]/10 space-y-6">
+          {/* Left Column: Contact Form (Span 7) */}
+          <div className="lg:col-span-7 bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-[#1F4A43]/10 space-y-6">
             <div className="space-y-2">
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#153732]">Send us a message</h2>
-              <p className="text-sm text-[#221F1B]/70">
-                Fill out the form below and our team will get back to you as soon as possible.
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#153732]">
+                Send Us a Message
+              </h2>
+              <p className="text-[#221F1B]/80 text-sm font-light">
+                Please fill out the form below and we will respond as soon as possible. Fields marked required must be completed.
               </p>
             </div>
 
-            <form onSubmit={(e) => { e.preventDefault(); alert("Form submitted successfully!"); }} className="space-y-5">
+            <form className="space-y-5">
               
               {/* Name Field */}
-              <div className="space-y-2">
-                <label htmlFor="name" className="block text-sm font-semibold text-[#153732]">
-                  Your Name
+              <div className="space-y-1.5">
+                <label htmlFor="name" className="block text-xs font-bold text-[#153732] uppercase tracking-wider">
+                  Name <span className="text-[#C68A2E]">*</span>
                 </label>
                 <input
                   type="text"
                   id="name"
                   required
-                  placeholder="John Doe"
-                  className="w-full px-4 py-3 rounded border border-[#1F4A43]/20 bg-[#F3F0E6]/30 text-[#221F1B] focus:outline-none focus:ring-2 focus:ring-[#C68A2E]"
+                  placeholder="Your full name"
+                  className="w-full px-4 py-3 rounded-lg border border-[#1F4A43]/20 bg-[#F3F0E6]/30 text-[#221F1B] focus:outline-none focus:ring-2 focus:ring-[#153732] text-sm"
                 />
               </div>
 
               {/* Email Field */}
-              <div className="space-y-2">
-                <label htmlFor="email" className="block text-sm font-semibold text-[#153732]">
-                  Email Address
+              <div className="space-y-1.5">
+                <label htmlFor="email" className="block text-xs font-bold text-[#153732] uppercase tracking-wider">
+                  Email <span className="text-[#C68A2E]">*</span>
                 </label>
                 <input
                   type="email"
                   id="email"
                   required
-                  placeholder="john@example.com"
-                  className="w-full px-4 py-3 rounded border border-[#1F4A43]/20 bg-[#F3F0E6]/30 text-[#221F1B] focus:outline-none focus:ring-2 focus:ring-[#C68A2E]"
+                  placeholder="your.email@example.com"
+                  className="w-full px-4 py-3 rounded-lg border border-[#1F4A43]/20 bg-[#F3F0E6]/30 text-[#221F1B] focus:outline-none focus:ring-2 focus:ring-[#153732] text-sm"
                 />
               </div>
 
-              {/* Reason For Contact Dropdown */}
-              <div className="space-y-2">
-                <label htmlFor="reason" className="block text-sm font-semibold text-[#153732]">
-                  Reason for Contact
+              {/* Reason for Contact Dropdown */}
+              <div className="space-y-1.5">
+                <label htmlFor="reason" className="block text-xs font-bold text-[#153732] uppercase tracking-wider">
+                  Reason for Contact <span className="text-[#C68A2E]">*</span>
                 </label>
                 <select
                   id="reason"
                   required
                   defaultValue=""
-                  className="w-full px-4 py-3 rounded border border-[#1F4A43]/20 bg-[#F3F0E6]/30 text-[#221F1B] focus:outline-none focus:ring-2 focus:ring-[#C68A2E]"
+                  className="w-full px-4 py-3 rounded-lg border border-[#1F4A43]/20 bg-[#F3F0E6]/30 text-[#221F1B] focus:outline-none focus:ring-2 focus:ring-[#153732] text-sm"
                 >
-                  <option value="" disabled>Select an option...</option>
-                  <option value="Support">Support</option>
-                  <option value="Sponsorship">Sponsorship</option>
-                  <option value="Volunteering">Volunteering</option>
-                  <option value="Donation">Donation</option>
-                  <option value="Partnership">Partnership</option>
-                  <option value="Media">Media</option>
-                  <option value="Other">Other</option>
+                  <option value="" disabled>Select an enquiry category...</option>
+                  <option value="support">Support</option>
+                  <option value="sponsorship">Sponsorship</option>
+                  <option value="volunteering">Volunteering</option>
+                  <option value="donation">Donation</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="media">Media</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
 
               {/* Message Field */}
-              <div className="space-y-2">
-                <label htmlFor="message" className="block text-sm font-semibold text-[#153732]">
-                  Message
+              <div className="space-y-1.5">
+                <label htmlFor="message" className="block text-xs font-bold text-[#153732] uppercase tracking-wider">
+                  Message <span className="text-[#C68A2E]">*</span>
                 </label>
                 <textarea
                   id="message"
-                  rows={4}
                   required
+                  rows={5}
                   placeholder="How can we help you?"
-                  className="w-full px-4 py-3 rounded border border-[#1F4A43]/20 bg-[#F3F0E6]/30 text-[#221F1B] focus:outline-none focus:ring-2 focus:ring-[#C68A2E]"
+                  className="w-full px-4 py-3 rounded-lg border border-[#1F4A43]/20 bg-[#F3F0E6]/30 text-[#221F1B] focus:outline-none focus:ring-2 focus:ring-[#153732] text-sm resize-y"
                 ></textarea>
               </div>
 
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#1F4A43] text-[#F3F0E6] font-semibold py-3.5 px-6 rounded shadow-sm hover:bg-[#153732] transition-colors"
+                className="w-full bg-[#153732] text-[#F3F0E6] font-semibold py-3.5 px-6 rounded-lg shadow-sm hover:bg-[#1F4A43] transition-all text-sm tracking-wide"
               >
-                Send Message
+                Send Message &rarr;
               </button>
+
             </form>
           </div>
 
-          {/* RIGHT 1 COL: OFFICE DETAILS & QUICK INFO */}
-          <div className="space-y-6">
-            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-[#1F4A43]/10 space-y-6">
-              <h3 className="font-serif text-xl font-bold text-[#153732]">Get in touch directly</h3>
-              <div className="space-y-4 text-sm text-[#221F1B]/80">
-                <div>
-                  <p className="font-semibold text-[#1F4A43]">Registered Office</p>
-                  <p className="mt-1">[Insert Registered Office Address]</p>
+          {/* Right Column: Contact Details & Legal Advice Notice (Span 5) */}
+          <div className="lg:col-span-5 space-y-8">
+            
+            {/* Contact Details Card */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#1F4A43]/10 space-y-6">
+              <div className="space-y-2">
+                <span className="text-xs font-bold text-[#C68A2E] uppercase tracking-wider">Direct Reach</span>
+                <h3 className="font-serif text-2xl font-bold text-[#153732]">
+                  Contact Details
+                </h3>
+              </div>
+
+              <div className="space-y-4 text-sm text-[#221F1B]/90 font-light">
+                <div className="border-b border-[#1F4A43]/10 pb-3">
+                  <span className="block font-semibold text-[#153732] text-xs uppercase tracking-wider">Registered Office</span>
+                  <p className="mt-1 text-[#221F1B]/70 italic">[CLIENT TO PROVIDE]</p>
                 </div>
-                <div>
-                  <p className="font-semibold text-[#1F4A43]">Email</p>
-                  <p className="mt-1">contact@wakeelsandwakeels.co.uk</p>
+
+                <div className="border-b border-[#1F4A43]/10 pb-3">
+                  <span className="block font-semibold text-[#153732] text-xs uppercase tracking-wider">Phone</span>
+                  <p className="mt-1 text-[#221F1B]/70 italic">[CLIENT TO PROVIDE]</p>
                 </div>
+
+                <div className="border-b border-[#1F4A43]/10 pb-3">
+                  <span className="block font-semibold text-[#153732] text-xs uppercase tracking-wider">Email</span>
+                  <p className="mt-1 text-[#221F1B]/70 italic">[CLIENT TO PROVIDE]</p>
+                </div>
+
                 <div>
-                  <p className="font-semibold text-[#1F4A43]">Phone</p>
-                  <p className="mt-1">[Insert Phone Number]</p>
+                  <span className="block font-semibold text-[#153732] text-xs uppercase tracking-wider">Website</span>
+                  <p className="mt-1 text-[#221F1B]/70 italic">[CLIENT TO CONFIRM]</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#153732] text-[#F3F0E6] p-6 rounded-lg shadow-sm space-y-3">
-              <h4 className="font-serif text-lg font-bold text-[#C68A2E]">Working Hours</h4>
-              <p className="text-sm text-[#F3F0E6]/90 leading-relaxed">
-                Monday – Friday: 9:00 AM – 5:00 PM<br />
-                Closed on weekends and UK bank holidays.
+            {/* Legal Notice & Adviser Finder Card */}
+            <div className="bg-[#153732] text-[#F3F0E6] p-8 rounded-2xl shadow-sm border-l-4 border-[#C68A2E] space-y-4">
+              <span className="text-xs font-bold text-[#C68A2E] uppercase tracking-wider">Important Legal Notice</span>
+              <h3 className="font-serif text-xl font-bold text-[#C68A2E]">
+                Immigration & Asylum Advice
+              </h3>
+              <p className="text-[#F3F0E6]/90 text-sm leading-relaxed font-light">
+                Wakeels and Wakeels does not provide immigration or asylum advice.
               </p>
+              <p className="text-[#F3F0E6]/80 text-sm leading-relaxed font-light">
+                If your enquiry concerns your own immigration status, asylum claim or visa, we will direct you towards appropriately registered advisers.
+              </p>
+              
+              <div className="pt-2">
+                <a
+                  href="https://www.gov.uk/find-an-immigration-adviser"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-xs font-semibold text-[#C68A2E] hover:underline"
+                >
+                  Find an official UK government immigration adviser &rarr;
+                </a>
+              </div>
             </div>
+
           </div>
 
         </div>
-
-        {/* VISIBLE LEGAL STATEMENT NOTICE */}
-        <section className="bg-[#153732] text-[#F3F0E6] p-8 rounded-lg shadow-sm space-y-4 border-l-4 border-[#C68A2E]">
-          <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#C68A2E]">
-            Important Notice Regarding Legal Advice
-          </h3>
-          <p className="text-[#F3F0E6]/90 leading-relaxed text-sm sm:text-base">
-            We cannot give immigration advice. If you are contacting us regarding your own personal immigration or asylum case, please consult an authorised professional. You can find a list of OISC/IAA-registered advisers via the official government portal.
-          </p>
-          <div className="pt-1">
-            <a
-              href="https://www.gov.uk/find-an-immigration-adviser"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[#C68A2E] text-[#153732] font-semibold px-5 py-2.5 rounded text-sm hover:opacity-90 transition-opacity shadow-sm"
-            >
-              Find a regulated OISC/IAA adviser on GOV.UK &rarr;
-            </a>
-          </div>
-        </section>
-
       </main>
+
     </div>
   );
 }
