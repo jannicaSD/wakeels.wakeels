@@ -3,6 +3,9 @@ import WhoWeSupportSection from "./who_we_support";
 import TwoPathsSection from "./two_path_section";
 import ServicesAndSponsorshipSection from "./service";
 import HomeCTASection from "./cat";
+import ImpactFactsSection from "./imapct";
+import TwoJourneysSection from "./twosection";
+import WhatWeDoHomeSection from "./what_we_do";
 
 export const metadata = {
   title: "Wakeels and Wakeels | Community Sponsorship & Refugee Support, UK",
@@ -15,13 +18,14 @@ export default function HomePage() {
       
       {/* 1. Hero Section */}
       <HeroSection />
+      <ImpactFactsSection />
+      <TwoJourneysSection />
+      < WhatWeDoHomeSection />
 
       {/* 2. Who We Support Section */}
       <WhoWeSupportSection />
 
-      {/* 3. Two Paths Section */}
-      <TwoPathsSection />
-
+  
       {/* 4. What We Do & Community Sponsorship Section */}
       <ServicesAndSponsorshipSection />
 
