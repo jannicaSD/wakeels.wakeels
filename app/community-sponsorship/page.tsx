@@ -1,6 +1,7 @@
 import CommunitySponsorshipHeroSection from "./hero"; // (or update path as per your folder structure)
 import HowSponsorshipWorksSection from "./community";
 import SponsorshipFAQSection from "./faq&cat";
+import WakeelsStatusStepsSection from "./stepsection";
 
 export const metadata = {
   title: "Community Sponsorship | Welcome a Refugee Family | Wakeels and Wakeels",
@@ -16,6 +17,7 @@ export default function CommunitySponsorshipPage() {
 
       {/* 2. How Community Sponsorship Works (UNHCR & Home Office Pathway) */}
       <HowSponsorshipWorksSection />
+      <WakeelsStatusStepsSection />
 
       {/* 3. Frequently Asked Questions & Call to Action */}
       <SponsorshipFAQSection />

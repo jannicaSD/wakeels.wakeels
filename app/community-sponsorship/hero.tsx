@@ -1,63 +1,63 @@
-import Link from "next/link";
-
-export const metadata = {
-  title: "Community Sponsorship | Welcome a Refugee Family | Wakeels and Wakeels",
-  description: "Since 2016, Community Sponsorship has enabled ordinary groups across the UK to formally welcome refugee families and support their resettlement.",
-};
-
-export default function CommunitySponsorshipPage() {
+export default function CommunitySponsorshipExplanationSection() {
   return (
-    <div className="bg-[#F3F0E6] text-[#221F1B] min-h-screen flex flex-col font-sans">
+    <div className="space-y-16 sm:space-y-24">
       
-      {/* HERO SECTION */}
-      <section className="bg-[#153732] text-[#F3F0E6] py-20 sm:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto space-y-6 text-center sm:text-left">
+      {/* 1. HERO SECTION */}
+      <section className="bg-[#153732] text-[#F3F0E6] py-20 sm:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden text-center">
+        <div className="max-w-4xl mx-auto space-y-6">
           
-          {/* Accent Tag */}
           <div className="inline-block bg-[#C68A2E]/10 text-[#C68A2E] border border-[#C68A2E]/30 text-xs sm:text-sm font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
-            Official Resettlement Route
+            Community Sponsorship
           </div>
 
-          {/* Main Headline */}
           <h1 className="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-[#F3F0E6] leading-tight">
-            Welcome a refugee family. Build a stronger community.
+            Communities can welcome a family.
           </h1>
 
-          {/* Description */}
-          <p className="text-lg sm:text-xl font-light text-[#F3F0E6]/90 max-w-2xl leading-relaxed">
-            Since 2016, Community Sponsorship has enabled ordinary groups across the UK — including neighbours, faith groups, workplaces and universities — to formally welcome refugee families and support their resettlement.
+          <p className="text-lg sm:text-xl font-light text-[#F3F0E6]/90 max-w-2xl mx-auto leading-relaxed">
+            Discover how ordinary groups across the UK unite to provide official resettlement and a genuine welcome.
           </p>
-
-          {/* Action Buttons */}
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4">
-            <Link
-              href="/get-involved"
-              className="w-full sm:w-auto bg-[#C68A2E] text-[#153732] font-semibold px-6 py-3.5 rounded shadow-sm hover:opacity-90 transition-all text-center"
-            >
-              Start a Sponsor Group &rarr;
-            </Link>
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto bg-[#1F4A43] text-[#F3F0E6] font-semibold px-6 py-3.5 rounded shadow-sm hover:bg-[#153732] border border-[#C68A2E]/30 transition-all text-center"
-            >
-              Get in Touch &rarr;
-            </Link>
-          </div>
 
         </div>
       </section>
 
-      {/* ADDITIONAL CONTENT CONTAINER (Placeholder for next sections) */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow w-full space-y-12">
-        <div className="bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-[#1F4A43]/10 space-y-4">
-          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#153732]">
-            How Community Sponsorship Works
-          </h2>
-          <p className="text-[#221F1B]/80 text-base leading-relaxed font-light">
-            Sponsor groups commit to a genuine partnership: welcoming the family on arrival, arranging suitable housing for at least two years, and providing around a year of hands-on integration support.
-          </p>
+      {/* 2. EXPLANATION SECTION */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div className="bg-white p-8 sm:p-14 rounded-3xl shadow-sm border border-[#1F4A43]/10 space-y-8">
+          
+          <div className="space-y-3">
+            <span className="text-xs font-bold text-[#C68A2E] uppercase tracking-wider">What is Community Sponsorship?</span>
+            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#153732]">
+              A Home Office-Recognised Pathway for Resettlement
+            </h2>
+          </div>
+
+          <div className="space-y-6 text-[#221F1B]/90 text-base sm:text-lg font-light leading-relaxed border-t border-[#1F4A43]/10 pt-6">
+            <p>
+              Since 2016, Community Sponsorship has allowed ordinary groups across the UK — neighbours, faith groups, workplaces, universities — to formally welcome a refugee family and support their resettlement.
+            </p>
+            
+            <p className="font-medium text-[#153732]">
+              It is a Home Office-recognised route, not a private arrangement.
+            </p>
+
+            <p>
+              The United Nations Refugee Agency (UNHCR) identifies refugees in need of resettlement, and only families accepted by the Home Office for resettlement can be matched to an approved sponsor group.
+            </p>
+          </div>
+
+          {/* Highlight Badge Box */}
+          <div className="bg-[#F3F0E6]/60 p-6 rounded-2xl border border-[#1F4A43]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <span className="text-xs font-bold text-[#153732] uppercase tracking-wider">Official Status</span>
+              <p className="text-sm font-semibold text-[#153732]">
+                Wakeels and Wakeels CIC is an approved UK Home Office Community Sponsorship group.
+              </p>
+            </div>
+          </div>
+
         </div>
-      </main>
+      </section>
 
     </div>
   );
